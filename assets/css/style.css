@@ -253,4 +253,9 @@ footer img:hover {
   width: 100%;
  }
 
+ :root {
+  --green: #00C853;
+  --red: #D50000;
+}
+
 }

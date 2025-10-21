@@ -22,32 +22,46 @@
     </header>
 
     <main class="main_contato">
-        
-        <form action="#" method="submit" id="formulario">
+      <form id="formulario" method="post" action="#" onsubmit="enviarForm(event)" >
             <h1>Fale Conosco</h1>
 
             <label for="nome">Nome: </label>
-            <input id="nome" type="text" name="name" placeholder="Digite seu nome" />
+            <input id="nome" type="text" name="name" placeholder="Digite seu nome" 
+            onkeyup="validaNome()" />
             <span id="errNome"></span>
+    
 
             <label for="email">Email: </label>
-            <input id="email" type="text" name="email" placeholder="Digite seu email" />
+            <input id="email" type="text" name="email" placeholder="Digite seu email" 
+            onkeyup="validaEmail()"
+            />
             <span id="errEmail"></span>
 
             <label for="subject">Assunto: </label>
-            <input id="subject" type="text" name="subject" placeholder="Digite o assunto da mensagem" />
+            <input id="subject" type="text" name="subject" placeholder="Digite o assunto da mensagem" 
+            onkeyup="validaAssunto()"
+            />
             <span id="errSubject"></span>
 
-            <label for="message">Mensagem: </label>
-            <textarea id="message" name="message" placeholder="Digite sua mensagem"></textarea>
+           <label for="message">Mensagem: </label>
+<textarea
+  name="message"
+  id="message"
+  placeholder="Digite aqui a sua mensagem..."
+  onkeyup="validaMensagem()"
+></textarea>
 
-            <button type="submit">Enviar</button>
+<span style="color: green">
+  <span id='errMessage'>0</span> / 150 caracteres
+</span>
+
+<button type="submit">Enviar</button>
         </form>
-            
+
         <article class="article_mapa">
             <h1>Nosso endereço:</h1>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5172.105993667376!2d-46.6609577073248!3d-23.560137743200766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59dda627a4c1%3A0x5b2894a7ce278306!2sM%C3%A9qui%201000!5e0!3m2!1spt-BR!2sbr!4v1760857372259!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5172.105993667376!2d-46.6609577073248!3d-23.560137743200766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59dda627a4c1%3A0x5b2894a7ce278306!2sM%C3%A9qui%201000!5e0!3m2!1spt-BR!2sbr!4v1760857372259!5m2!1spt-BR!2sbr" title="mapa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
             <address>
                 <br>
                 Av. Paulista, 1811<br>
@@ -71,6 +85,6 @@
         </section>
         <h3> © 2025 4Tech Soluções. Todos os direitos reservados.</h3>
     </footer>
-
+    <script src="./assets/script/script.js"></script>
 </body>
 </html>
